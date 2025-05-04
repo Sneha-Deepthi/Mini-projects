@@ -1,0 +1,417 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.backgroundContainer{
+    background-image:url("./images and icons/banner.jpg") ;
+    filter: blur(16px);
+    height:100vh;
+    position: relative;
+}
+
+.pinkOverlay{
+    background-color: rgba(62, 39, 35, 0.301);
+    height:100%;
+    width:100%;
+}
+
+.blackOverlay{
+    background-color:rgba(91, 38, 38, 0.145);
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    background-image: linear-gradient(rgba(3, 3, 3, 0.801), rgba(54, 27, 31, 0.714),rgba(19, 19, 19, 0.834));
+}
+
+.blackOverlay2{
+    background-color:rgba(0, 0, 0, 0.626);
+    height:100%;
+    width:100%;
+    position:absolute;
+    top:0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.821), rgba(47, 38, 40, 0.903),rgba(0, 0, 0, 0.886));
+}
+
+.contentContainer{
+    position:absolute;
+    top:0;
+    padding:0rem 2rem;
+}
+nav{
+    height:10vh;
+    display:flex;
+}
+
+.navbarSection{
+    display: flex;
+    height:100%;
+}
+
+.navbarLeftSection{
+    width:50%;
+    margin:0px 0px 16px;
+}
+
+.netflixLogo{
+    width:27%;
+}
+.navbarRightSection{
+    width:50%;
+    padding-top: 1rem;
+}
+
+.navBarButtonContainer{
+    display: flex;
+    justify-content: flex-end;
+    padding:1rem;
+    height:100%;
+    align-items: center;
+}
+
+.languageButton{
+    display:flex;
+    padding:0.4rem .8rem;
+    border-radius: 50px;
+    background: transparent;
+    border:1px solid white;
+    outline:none;
+    font-size: 1rem;
+    color:white;
+}
+
+.signinButton{
+    background-color: #fff;
+    padding:0.4rem .8rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    outline: none;
+    border:none;
+    margin-left: 10px;
+}
+.languageButton p{
+    margin-left:5px;
+}
+
+.langSelect{
+    color:white;
+    background:transparent;
+    border: none;
+    font-size:1rem;
+}
+
+.langSelect option{
+    color: black;
+}
+
+.bannerSection {
+    height: 75vh;
+    margin-top: 1rem;
+    position: relative;
+    clip-path: polygon(
+        0% 0%,100% 0%,100% 100%,50% 95%,0% 100%);
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position:absolute;
+    top:0;
+    height:100%;
+    width:100%;
+    border-radius: 30px;
+}
+
+.slider img {
+    animation: slide-infinite 90s linear infinite;
+}
+
+@keyframes slide-infinite {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.588), rgba(0, 0, 0, 0.758), rgba(60, 58, 58, 0.796));
+    clip-path: polygon(
+        0% 0%,100% 0%,100% 100%,50% 95%,0% 100%);
+    border-radius: 30px;
+}
+
+.bannerContainer {
+    border: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerContainer h2{
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+    width:50%;
+    text-align: center;
+}
+
+.bannerContainer h4{
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.bannerContainer p{
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.inputContainer{
+    margin-top: 0.5rem;
+    width:40%;
+    display:flex;
+    justify-content: space-between;
+}
+.emailInputBox{
+    padding:1rem;
+    border-radius:50px;
+    border:1px solid rgba(255, 255, 255, 0.199);
+    outline:none;
+    width:65%;
+    background-color: rgba(95, 93, 93, 0.701);
+    color:white;
+    font-size: 1rem;
+
+}
+
+.emailInputBox::placeholder{
+    color:white;
+}
+.getStartedButton{
+    width:33%;
+    background-color: red;
+    border:none;
+    outline: none;
+    border-radius: 50px;
+    color:white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.carouselSection{
+    margin: 1% 13% 3% 10%;
+    color:white;
+}
+
+h2{
+    font-size: 2.2rem;
+    color:rgb(190, 186, 186);
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+}
+.carouselCardContainer{
+    margin: 2%;
+    height:100%;
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.carouselCard{
+    height:37vh;
+    width:fit-content;
+}
+
+.carouselNumberContainer{
+    position:relative;
+}
+
+.carouselNumberContainer span{
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 0.2rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+    font-size: 3.5rem;
+    font-weight:800;
+    position:absolute;
+    left:-15%;
+    font-family: sans-serif;
+}
+.carouselImageContainer{
+    height: 100%;
+}
+
+.carouselImageContainer img{
+    height: 100%;
+    border-radius: 20px;
+}
+
+.reasonToJoin{
+    color:white;
+    margin: 1% 10% 3% 10%;
+    padding: 0px;
+}
+
+.reasonsContainer{
+    display:flex;
+    align-items: center;
+    justify-items: space-between;
+    padding:5px 0px 5px 0px;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.reasons{
+    width:20vw;
+    min-height: 27vh;
+    margin-right: 1%;
+    padding: 1%;
+    background-color: rgba(124, 121, 121, 0.297);
+    border-radius: 7%;
+}
+
+.reasons h3{
+    margin:1%;
+    font-size: 1.3rem;
+}
+.reasons p{
+    color: #ffffff96;
+    margin:3%;
+    font-size: 1.1rem;
+}
+
+.faqSection {
+    margin: 1% 10% 1% 10%;
+    color:white;
+    text-align: left;
+}
+
+.questionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 1%;
+}
+
+summary {
+    background-color: rgba(124, 121, 121, 0.297);
+    font-size: 1.2rem;
+    font-weight: bold;
+    list-style: none;
+    display: flex;
+    border-radius: 10px;
+    padding: 1.2rem;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+    border: 1px solid rgba(195, 192, 192, 0.419);
+}
+
+details :hover{
+    background-color: rgba(124, 118, 118, 0.638);
+}
+
+summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    transition: transform 0.3s;
+}
+
+
+details[open] summary::after {
+    content: "x";
+}
+
+details p {
+    background-color: rgba(124, 121, 121, 0.297);
+    padding:1.2rem;
+    border-radius: 10px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    cursor:default;
+}
+
+details p:hover{
+    background-color: rgba(124, 121, 121, 0.297);
+}
+
+.getStarted{
+    margin: 3% 10% 3% 10%;
+    padding:1%;
+}
+
+.getStarted p{
+    text-align: center;
+    color: white;
+    font-size: 1.3rem;
+}
+
+.getStarted div{
+    margin:1% 30% 0px 30%;
+}
+
+footer{
+    color:white;
+    margin:2% 10% 2% 10%;
+}
+
+.contactNumber{
+    display:flex;
+}
+
+.contactNumber p{
+    width: fit-content;
+}
+
+.contactNumber span{
+    margin-left:0.3%;
+    text-decoration: underline;
+}
+
+.linksContainer {
+    margin:4% 0% 4% 0%;
+    display: flex;
+    justify-content: left;
+}
+
+.listOfLinks {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px 50px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.listOfLinks li {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.owner{
+    margin:4% 0% 4% 0%;
+}
+
